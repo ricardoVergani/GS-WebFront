@@ -5,7 +5,7 @@ import styled from "styled-components"
 export const DivMain = styled.div`
 
     height: 70%;
-    background-color: #ffc0cb ;
+    background-color: #74ff73 ;
     display: flex;
     flex-direction: column;
     padding: 30px;
