@@ -67,7 +67,7 @@ export default function Login(){
             <div className="login">
                 <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend> <h3> Informações do usuário </h3> </legend>
+                    <legend> <h3> Informações do Usuário </h3> </legend>
                     <label htmlFor="idEmail">Email</label>
                     <input type="email" id="idEmail" name="email" placeholder="Digite seu email" value={usuario.email} onChange={handleChange}/>
                     <label htmlFor="idSenha">Senha</label>
