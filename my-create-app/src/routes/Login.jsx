@@ -1,5 +1,7 @@
+import "../css/Login.scss"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { DivMain } from "../css/styled";
 
 
 
@@ -47,7 +49,7 @@ export default function Login(){
 
                 sessionStorage.setItem("dados-usuario",JSON.stringify(users[x]));
 
-                navigate('/',{replace: true})
+                navigate('/conteudo',{replace: true})
 
                 return;
             }
@@ -61,15 +63,19 @@ export default function Login(){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-        <fieldset>
-            <legend><h3>Informações do usuário</h3> </legend>
-            <label htmlFor="idEmail">Email</label>
-            <input type="email" id="idEmail" name="email" placeholder="Digite seu email" value={usuario.email} onChange={handleChange}/>
-            <label htmlFor="idSenha">Senha</label>
-            <input type="password" id="idSenha" name="senha" placeholder="Digite sua senha" value={usuario.senha} onChange={handleChange}/>
-            <button> Login </button>
-        </fieldset>
-    </form>
+        <DivMain> 
+            <div className="login">
+                <form onSubmit={handleSubmit}>
+                <fieldset>
+                    <legend> <h3> Informações do usuário </h3> </legend>
+                    <label htmlFor="idEmail">Email</label>
+                    <input type="email" id="idEmail" name="email" placeholder="Digite seu email" value={usuario.email} onChange={handleChange}/>
+                    <label htmlFor="idSenha">Senha</label>
+                    <input type="password" id="idSenha" name="senha" placeholder="Digite sua senha" value={usuario.senha} onChange={handleChange}/>
+                    <button> Login </button>
+                </fieldset>
+                </form>
+            </div>
+        </DivMain>
     )
 }
