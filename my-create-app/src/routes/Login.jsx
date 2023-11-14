@@ -28,7 +28,7 @@ export default function Login(){
             const response = await fetch("http://localhost:5000/usuarios");
             users = await response.json();
         } catch (error) {
-            alert("Ocorreu um erro no processamento da sua solicitação!");
+            alert("Algo de errado aconteceu durante o processo!");
         }
 
         for (let x = 0; x < users.length; x++){
@@ -37,7 +37,7 @@ export default function Login(){
 
             if (user.email == usuario.email && user.senha == usuario.senha){
 
-                alert("Login realizado com sucesso!")
+                alert("Login realizado!")
 
                 const tokenUser = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
 
@@ -53,7 +53,7 @@ export default function Login(){
             }
         }
 
-        alert("Login ou senha incorretos! Tente novamente.")
+        alert("Login incorreto, tente novamente.")
         setUsuario({
             email: "",
             senha: ""
