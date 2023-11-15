@@ -1,18 +1,10 @@
-import { Outlet } from "react-router-dom"
-import Cabecalho from "./components/Cabecalho"
-import Rodape from "./components/Rodape"
-import "./css/Global_Reset.scss"
+import { Outlet } from "react-router-dom";
 
+export default function App() {
 
-
-
-export default function App(){
-  return(
-      <div>
-        <Cabecalho/>
-        <Outlet/>
-        <Rodape/>
-      </div>
-  )
-
+  return (
+    <>
+      <Outlet/>
+    </>
+  );
 }
