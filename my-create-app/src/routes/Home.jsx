@@ -1,6 +1,10 @@
 import "../css/Home.scss"
 import Cabecalho from "../components/Cabecalho";
 import Rodape from "../components/Rodape";
+import Climatizacao from "../img/climatizacao.jpg"
+import Conforto from "../img/confortoo.png"
+import Seguranca from "../img/segurancaa.png"
+import Facilidade from "../img/facilidade.png"
 
 export default function Home() {
     document.title = "Home";
@@ -14,7 +18,9 @@ export default function Home() {
             </div>
 
             <div className="container">
-              <header>header1</header>
+              <header>
+                <img src={Climatizacao} alt="climatizacao" />
+              </header>
               <nav>
                 <h1>O que é a solução? </h1>
                   <p> A solução é um sensor DHT22 nomeado SalaSafe MedGuard que mede a temperatura e humidade das salas e as envia para um aplicativo, onde possam ser verificadas e controladas. </p>
@@ -35,18 +41,21 @@ export default function Home() {
             <div className="cards">
                     <div className="card">
                         <h2> 01 </h2>
+                        <img src={Conforto} alt="conforto" />
                         <p> O produto oferece mais conforto a todos presentes em ambientes hospitalares, diminuindo estresse e irritações.  </p>
                         <button> Saiba mais </button>
                     </div>
 
                     <div className="card">
                         <h2> 02 </h2>
+                        <img src={Seguranca} alt="" />
                         <p> Salas cirurgicas podem ser constantemente monitoradas, para que os parametros de temperatura e humidade sejam ideais </p>
                         <button> Saiba mais </button>
                     </div>
 
                     <div className="card">
                         <h2> 03</h2>
+                        <img src={Facilidade } alt="" />
                         <p> Pacientes em repouso com necessidade específica de temperatura podem ser checados mais facilmente. </p>
                         <button> Saiba mais </button>
                     </div>
